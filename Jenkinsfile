@@ -12,13 +12,13 @@ pipeline {
         stage('Merge') {
             steps {
                 script {
-                    //sh "git checkout ${TARGET_BRANCH}"
-                   // sh "git merge ${SOURCE_BRANCH} --no-ff -m 'Merge ${SOURCE_BRANCH} into ${TARGET_BRANCH}'"
+                    sh "git checkout ${TARGET_BRANCH}"
+                    sh "git merge ${SOURCE_BRANCH} --no-ff -m 'Merge ${SOURCE_BRANCH} into ${TARGET_BRANCH}'"
                     //sh "git push origin ${TARGET_BRANCH}"
-                    sh 'git pull origin main'
-                    sh 'git checkout dev'
-                    sh 'git merge main'
-                    sh 'git push -u origin dev'
+                   // sh 'git pull origin main'
+                  //  sh 'git checkout dev'
+                   // sh 'git merge main'
+                    //sh 'git push -u origin dev'
                 }
             }
         }
