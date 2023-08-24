@@ -18,7 +18,7 @@ pipeline {
                     //sh "git push origin ${TARGET_BRANCH}"
                    sh 'git pull origin main --allow-unrelated-histories'
                     sh 'git checkout dev'
-                    sh 'git merge main'
+                    sh 'git merge main --allow-unrelated-histories'
                     sh 'git push -u origin dev'
                 }
             }
